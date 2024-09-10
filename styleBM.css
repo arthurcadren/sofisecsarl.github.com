@@ -1,0 +1,16 @@
+.styled-select {
+    background-color: black; /* Fond noir */
+    color: white; /* Texte blanc */
+    border: 1px solid white; /* Bordure blanche de 2px */
+    border-radius: 0; /* Style carré (pas de bord arrondi) */
+    padding: 10px; /* Espacement interne pour le confort */
+    width: 100px; /* Largeur personnalisable */
+    font-size: 16px; /* Taille du texte */
+    appearance: none; /* Supprime la flèche native par défaut du navigateur */
+  }
+  
+  .styled-select option {
+    background-color: white; /* Fond blanc des options */
+    color: black; /* Texte noir pour les options */
+  }
+  
