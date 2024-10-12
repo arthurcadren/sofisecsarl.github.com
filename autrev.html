@@ -1,0 +1,657 @@
+<html><head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <base href="https://www.sofisecsarl.com/"> -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cabinet comptable et fiscal sofisecsarl, Cameroun. Expertise en comptabilité, audit, fiscalité et gestion de paie commerce general prestation de services.">
+<meta name="keywords" content="comptable, fiscal, Douala, Cameroun, audit, paie, sofisec, sofisecsarl, comptable">
+<title>Cabinet Comptable et Fiscal sofisecsarl | Votre Partenaire Financier de Confiance</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #1a2a3a;
+      --secondary-color: #f5f5f5;
+      --accent-color: #4caf50;
+      --text-color: #333;
+      --white: #ffffff;
+    }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--white);
+    }
+  
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo img {
+      width: 150px;
+      height: 50px;
+      animation: logoAnimation 3s ease-in-out infinite;
+    }
+  
+    .contact-info {
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 0.9rem;
+    }
+  
+    .mobile-contact {
+      display: flex;
+      align-items: center;
+    }
+  
+    .mobile-contact a {
+      color: var(--white);
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+  
+    .nav-links li {
+      margin-left: 20px;
+    }
+  
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 400;
+    }
+  
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+  
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: 1px solid var(--white);
+      color: var(--white);
+      padding: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+  
+    .lang-switch:hover {
+      background-color: var(--white);
+      color: var(--primary-color);
+    }
+  
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+  
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--white);
+      margin: 2px 0;
+    }
+  
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+  
+      .contact-info {
+        display: none;
+      }
+  
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 20px;
+      }
+  
+      .nav-links.active {
+        display: flex;
+      }
+  
+      .nav-links li {
+        margin: 10px 0;
+      }
+  
+      .hero {
+        height: 60vh;
+      }
+  
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  
+  
+  
+  
+    h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .resources-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 7rem;
+        }
+
+        .resource-item {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        #calculator {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+        }
+
+        #calculator input, #calculator select {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        #pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            margin-top: 2rem;
+        }
+  
+   
+  
+    
+  
+   
+  
+  
+  
+    footer {
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+  
+    .footer-nav, .footer-contact, .footer-social {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 1rem;
+    }
+  
+    .footer-nav h4, .footer-contact h4, .footer-social h4 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+  
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .social-icons a {
+      transition: transform 0.3s ease;
+    }
+  
+    .social-icons a:hover {
+      transform: translateY(-3px);
+    }
+  
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1rem;
+    }
+  
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+  
+      .hero {
+        height: 60vh;
+      }
+  
+      h1 {
+        font-size: 2rem;
+      }
+  
+      .service-card {
+        padding: 1rem;
+      }
+    }
+  
+    .why-us-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .why-us-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .why-us-text ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  
+    .why-us-text ul li {
+      margin-bottom: 0.5rem;
+    }
+  
+    .fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+  
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    @keyframes logoAnimation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+  
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+  
+    .teleassistance-button {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: var(--accent-color);
+      color: var(--white);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .teleassistance-button:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">
+          <img src="logo.jpg" alt="Logo sofisec">
+        </div>
+        <div class="contact-info">
+          <span>+237 659 04 82 01</span>
+          <span>contact@sofisecsarl.com</span>
+        </div>
+        <div class="mobile-contact">
+          <a href="tel:+237 659 04 82 01"><img src="telephone.png" alt="Appeler" width="24" height="24"></a>
+          <a href="mailto:contact@sofisecsarl.com"><img src="gmail.png" alt="Email" width="24" height="24"></a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">À propos</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ressources
+            </a>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="surplusv.html">Support Comptable</a></li>
+              <li><a class="dropdown-item" href="autrev.html">Support Fiscal</a></li>
+              <li><a class="dropdown-item" href="televrai.html">Options de Téléassistance</a></li>
+              <li><a class="dropdown-item" href="informationv.html">Actualités Fiscales et Comptables</a></li>
+              <li><a class="dropdown-item" href="questionsv.html">FAQ - Questions Fréquentes</a></li>
+              <li><a class="dropdown-item" href="confidentialitevrai.html">Politique de confidentialité</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="lang-switch" id="langSwitch">
+          <img src="langue.png" alt="Language" width="20" height="20">
+          <span>FR</span>
+        </button>
+      </nav>
+    </header>
+  
+    <main class="container">
+        <section class="resources-section">
+            <div class="resource-item">
+                <div class="resource-icon">📊</div>
+                <h3>Calculateur Fiscal</h3>
+                <p>Estimez rapidement vos impôts avec notre calculateur en ligne.</p>
+                <a href="#calculator" class="btn">Utiliser</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">📅</div>
+                <h3>Calendrier Fiscal</h3>
+                <p>Ne manquez aucune échéance importante avec notre calendrier fiscal.</p>
+                <a href="#" class="btn" onclick="showPDF('calendrier-fiscal.pdf')">Voir</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">📚</div>
+                <h3>Guide Comptable</h3>
+                <p>Téléchargez notre guide complet sur la comptabilité au Cameroun.</p>
+                <a href="#" class="btn" onclick="showPDF('guide-comptable.pdf')">Télécharger</a>
+            </div>
+            <div class="resource-item">
+                <div class="resource-icon">💼</div>
+                <h3>Modèles de Documents</h3>
+                <p>Accédez à nos modèles de documents comptables et fiscaux.</p>
+                <a href="#" class="btn" onclick="showPDF('modeles-documents.pdf')">Accéder</a>
+            </div>
+        </section>
+
+        <section id="calculator">
+            <h2>Calculateur Fiscal Simplifié</h2>
+            <form id="tax-calculator">
+                <input type="number" id="income" placeholder="Revenu annuel" required>
+                <select id="business-type">
+                    <option value="individual">Particulier</option>
+                    <option value="company">Entreprise</option>
+                </select>
+                <button type="submit" class="btn">Calculer</button>
+            </form>
+            <div id="result"></div>
+        </section>
+
+        <div id="pdf-viewer"></div>
+    </main>
+  
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html#accueil">Accueil</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="index.html#about">À propos</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ressources
+                </a>
+                <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="surplusv.html">Support Comptable</a></li>
+                  <li><a class="dropdown-item" href="autrev.html">Support Fiscal</a></li>
+                  <li><a class="dropdown-item" href="televrai.html">Options de Téléassistance</a></li>
+                  <li><a class="dropdown-item" href="informationv.html">Actualités Fiscales et Comptables</a></li>
+                  <li><a class="dropdown-item" href="questionsv.html">FAQ - Questions Fréquentes</a></li>
+                  <li><a class="dropdown-item" href="confidentialitevrai.html">Politique de confidentialité</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contactez-nous</h4>
+            <p>Akwa au niveau de Ancien PMUC, Douala, Cameroun</p>
+            <p>Téléphone : +237 659 04 82 01</p>
+            <p>Email : contact@sofisecsarl.com</p>
+          </div>
+          <div class="footer-social">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="LinkedIn" width="32" height="32"></a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="iconefacebook.png" alt="Facebook" width="32" height="32"></a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img src="x.png" alt="Twitter" width="32" height="32"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cabinet Comptable sofisecsarl. Tous droits réservés.</p>
+          <p><a href="questionsv.html">Mentions légales</a> | <a href="confidentialitevrai.html">Politique de confidentialité</a></p>
+        </div>
+      </div>
+    </footer>
+  
+    <a href="#" class="teleassistance-button" id="teleassistanceBtn">
+      <img src="teleAssistance.png" alt="Téléassistance" width="24" height="24">
+      Téléassistance
+    </a>
+  
+    <a href="https://wa.me/+237659048201" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+      <img src="whatsapp.png" alt="WhatsApp" width="40" height="40">
+    </a>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const langSwitch = document.getElementById('langSwitch');
+        let currentLang = 'FR';
+  
+        langSwitch.addEventListener('click', () => {
+          currentLang = currentLang === 'FR' ? 'EN' : 'FR';
+          langSwitch.querySelector('span').textContent = `${currentLang}`;
+          changeLanguage(currentLang);
+        });
+  
+        function changeLanguage(lang) {
+          console.log(`Changing language to ${lang}`);
+        }
+  
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+  
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+  
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        }, { threshold: 0.1 });
+  
+        document.querySelectorAll('section').forEach(section => {
+          observer.observe(section);
+        });
+  
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          console.log('Form submitted');
+          alert('Merci pour votre message. Nous vous contacterons bientôt.');
+          form.reset();
+        });
+  
+        const testimonialForm = document.getElementById('testimonial-form');
+        const testimonialsContainer = document.querySelector('.testimonials-container');
+  
+        testimonialForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = e.target.elements.name.value;
+          const testimonial = e.target.elements.testimonial.value;
+  
+          const newTestimonial = document.createElement('div');
+          newTestimonial.classList.add('testimonial');
+          newTestimonial.innerHTML = `
+            <p class="testimonial-content">"${testimonial}"</p>
+            <p class="testimonial-author">- ${name}</p>
+          `;
+  
+          testimonialsContainer.appendChild(newTestimonial);
+          testimonialForm.reset();
+        });
+  
+        const teleassistanceBtn = document.getElementById('teleassistanceBtn');
+  
+        teleassistanceBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Redirection vers la page de téléassistance...');
+          // window.location.href = '/teleassistance';
+        });
+      });
+
+
+
+      //script special de cette page 
+
+      // Calculateur Fiscal Simplifié
+      document.getElementById('tax-calculator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const income = parseFloat(document.getElementById('income').value);
+            const businessType = document.getElementById('business-type').value;
+            let taxRate;
+
+            if (businessType === 'individual') {
+                if (income <= 2000000) taxRate = 0.1;
+                else if (income <= 3000000) taxRate = 0.15;
+                else if (income <= 5000000) taxRate = 0.25;
+                else taxRate = 0.35;
+            } else {
+                taxRate = 0.3; // Taux d'imposition des sociétés au Cameroun
+            }
+
+            const estimatedTax = income * taxRate;
+            document.getElementById('result').innerHTML = `Impôt estimé: ${estimatedTax.toFixed(2)} FCFA`;
+        });
+
+        // Fonction pour afficher les PDF
+        function showPDF(pdfUrl) {
+            const loadingTask = pdfjsLib.getDocument(pdfUrl);
+            loadingTask.promise.then(function(pdf) {
+                pdf.getPage(1).then(function(page) {
+                    const scale = 1.5;
+                    const viewport = page.getViewport({scale: scale});
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+                    document.getElementById('pdf-viewer').innerHTML = '';
+                    document.getElementById('pdf-viewer').appendChild(canvas);
+                });
+            });
+        }
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

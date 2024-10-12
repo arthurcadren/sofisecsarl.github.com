@@ -1,0 +1,948 @@
+<html><head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <base href="https://www.sofisecsarl.com/"> -->
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cabinet comptable et fiscal sofisecsarl, Cameroun. Expertise en comptabilité, audit, fiscalité et gestion de paie commerce general prestation de services.">
+<meta name="keywords" content="comptable, fiscal, Douala, Cameroun, audit, paie, sofisec, sofisecsarl, comptable">
+<title>Cabinet Comptable et Fiscal sofisecsarl | Votre Partenaire Financier de Confiance</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #1a2a3a;
+    --secondary-color: #f5f5f5;
+    --accent-color: #4caf50;
+    --text-color: #333;
+    --white: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 140px;
+    height: 50px;
+    animation: logoAnimation 3s ease-in-out infinite;
+  }
+
+  .contact-info {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9rem;
+  }
+
+  .mobile-contact {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-contact a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-color);
+  }
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .lang-switch:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 2px 0;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .contact-info {
+      display: none;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary-color);
+      padding: 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .hero {
+      height: 60vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .hero {
+    background-image: url('imgAcceuil.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+    margin-top: 6rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+
+  .service-icon img {
+    width: 225px;
+    height: 100px;
+  }
+
+  .about-section {
+    background-color: var(--secondary-color);
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  .testimonial {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .testimonial:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial-content {
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    color: var(--accent-color);
+  }
+
+  .testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .contact-form button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .google-map {
+    width: 100%;
+    height: 300px;
+    background-color: #eaeaea;
+    margin-top: 1rem;
+  }
+
+  .testimonial-form {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+
+  .testimonial-form input,
+  .testimonial-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .testimonial-form button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .testimonial-form button:hover {
+    background-color: #45a049;
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-nav h4, .footer-contact h4, .footer-social h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-icons a {
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: translateY(-3px);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hero {
+      height: 60vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .service-card {
+      padding: 1rem;
+    }
+  }
+
+  .why-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+/*image pourquoi nou choisir forma pc*/
+.why-us-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Pour permettre l'empilement sur les petits écrans */
+}
+
+.why-us-text {
+  flex: 1; /* Le texte occupera une partie égale de l'espace */
+  margin-right: 20px; /* Espacement entre le texte et l'image sur grand écran */
+}
+/*image pourquoi nous choisir format pc*/
+  .why-us-image img {
+    max-width: 95%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  }
+
+  /*image de pourquoi nous choisir*/
+
+  @media (max-width: 768px) {
+  .why-us-content {
+    flex-direction: column; /* Empilement vertical sur mobile */
+  }
+
+  .why-us-text {
+    margin-right: 0;
+    margin-bottom: 20px; /* Espacement entre le texte et l'image sur mobile */
+  }
+
+  .why-us-image img {
+    max-width: 100%; /* L'image prend toute la largeur disponible sur mobile */
+  }
+}
+
+/*image de pourquoi nous choisir*/
+  .why-us-text ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .why-us-text ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes logoAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .floating-whatsapp:hover {
+    transform: scale(1.1);
+  }
+
+  .teleassistance-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .teleassistance-button:hover {
+    transform: translateY(-3px);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo sofisec">
+      </div>
+      <div class="contact-info">
+        <span>+237 659 04 82 01</span>
+        <span>contact@sofisecsarl.com</span>
+      </div>
+      <div class="mobile-contact">
+        <a href="tel:+237 659 04 82 01"><img src="telephone.png" alt="Appeler" width="24" height="24"></a>
+        <a href="mailto:contact@sofisecsarl.com"><img src="gmail.png" alt="Email" width="24" height="24"></a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ressources
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="surplusv.html">Support Comptable</a></li>
+            <li><a class="dropdown-item" href="autrev.html">Support Fiscal</a></li>
+            <li><a class="dropdown-item" href="televrai.html">Options de Téléassistance</a></li>
+            <li><a class="dropdown-item" href="informationv.html">Actualités Fiscales et Comptables</a></li>
+            <li><a class="dropdown-item" href="questionsv.html">FAQ - Questions Fréquentes</a></li>
+            <li><a class="dropdown-item" href="confidentialitevrai.html">Politique de confidentialité</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="lang-switch" id="langSwitch">
+        <img src="langue.png" alt="Language" width="20" height="20">
+        <span>FR</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-content">
+        <h1>Des services comptables et fiscaux adaptés à votre entreprise</h1>
+        <p>Expertise, fiabilité et conseils personnalisés pour votre réussite financière</p>
+        <a href="#contact" class="cta-button">Contactez-nous</a>
+      </div>
+    </section>
+    
+    <section id="services">
+      <div class="container">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="comgeneral.jpg" alt="Icône Comptabilité">
+            </div>
+            <h3>Comptabilité générale</h3>
+            <p>Tenue de livres, audits et rapports financiers</p>
+            <a href="service11.html" class="service-link">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="fiscalite.jpg" alt="Icône Fiscalité">
+            </div>
+            <h3>Fiscalité des entreprises</h3>
+            <p>Optimisation fiscale et déclarations</p>
+            <a href="service22.html" class="service-link">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="audit.jpg" alt="Icône Audit">
+            </div>
+            <h3>Audit financier</h3>
+            <p>Évaluation et amélioration de vos processus financiers</p>
+            <a href="service33.html" class="service-link">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="imgAcceuil.jpg" alt="Icône Conseil">
+            </div>
+            <h3>Conseil fiscal et optimisation</h3>
+            <p>Stratégies fiscales adaptées à votre entreprise</p>
+            <a href="service44.html" class="service-link">En savoir plus</a>
+          </div>
+        </div><br>
+        <!-- liste 2 de cards -->
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="it.jpg" alt="Icône Comptabilité">
+            </div>
+            <h3>Services de Développement et Support Informatique</h3>
+            <p>Développement web, mobile, SEO, design graphique, maintenance, support informatique et sécurité.</p>
+            <a href="https://cstechnologybuilders.github.io/cs.github.io/" class="service-link">En savoir plus</a>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="plombier.jpg" alt="Icône Fiscalité">
+            </div>
+            <h3>Services de Plomberie et Tuyauterie</h3>
+            <p>Installation, réparation et entretien de systèmes de plomberie, chaudières, et canalisations.</p>
+            <!-- <a href="service22.html" class="service-link">En savoir plus</a> -->
+          </div>
+          
+          
+      </div>
+    </section>
+
+    <section id="why-us">
+      <div class="container">
+        <h2>Pourquoi nous choisir ?</h2>
+        <div class="why-us-content">
+          <div class="why-us-text">
+            <p>Nous nous engageons à fournir des services personnalisés, adaptés aux besoins spécifiques de votre entreprise.</p>
+            <ul>
+              <li>Équipe qualifiés et dynamique toujours à votre disposition</li>
+              <li>Services sur mesure pour votre entreprise.</li>
+              <li>Utilisation des outils financiers de qualité pour votre accompagnement.</li>
+              <!-- <li>Utilisation des dernières technologies comptables</li> -->
+            </ul>
+          </div>
+          <div class="why-us-image">
+            <img src="conseil1.jpg" alt="Notre équipe au travail">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>À propos de nous</h2>
+        <p>Fondé en 2024, Notre mission est de fournir des services comptables et fiscaux de haute qualité, adaptés aux besoins spécifiques de chacun de nos clients.</p>
+        <h3>Notre vision</h3>
+        <p>Nous aspirons à être un partenaire de confiance pour toutes les entreprises au Cameroun, en les aidant à naviguer dans les complexités financières et fiscales pour atteindre leur plein potentiel.</p>
+        <!-- <h3>Notre équipe</h3>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="https://www.cabinet-comptable-douala.cm/images/team-member-1.jpg" alt="Roger Kouam, Expert-comptable">
+            <div>
+              <h4>Roger Kouamo</h4>
+              <p>Expert-comptable avec plus de 20 ans d'expérience</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="https://www.cabinet-comptable-douala.cm/images/team-member-2.jpg" alt="Nya Ludovic , Fiscaliste">
+            <div>
+              <h4>Nya Ludovuc</h4>
+              <p>Fiscaliste spécialisée en droit fiscal camerounais</p>
+            </div>
+          </div>
+          
+        </div> -->
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <!-- <h2>Témoignages clients</h2>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <p class="testimonial-content">"Le Cabinet Comptable Douala a été d'une aide précieuse pour la gestion financière de notre entreprise. Leur expertise et leur professionnalisme sont remarquables."</p>
+            <p class="testimonial-author">- Nkom Bertrand, PDG de Nsia Enterprises</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-content">"Grâce à leurs conseils avisés, nous avons pu optimiser notre situation fiscale tout en restant en conformité avec la législation. Je les recommande vivement."</p>
+            <p class="testimonial-author">- Françoise Mballa, Directrice financière chez Douala Industries</p>
+          </div>
+        </div> -->
+        <div class="container">
+          <h3>Partagez votre expérience</h3>
+          <form id="testimonial-form" class="testimonial-form">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <textarea name="testimonial" placeholder="Votre témoignage" required></textarea>
+            <button type="submit">Soumettre</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="blog">
+      <div class="container">
+        <h2>Blog et Actualités</h2>
+        <article>
+          <h3>Nouvelles réglementations fiscales au Cameroun en 2024</h3>
+          <p>Découvrez les changements majeurs dans la législation fiscale camerounaise et leur impact sur votre entreprise.</p>
+          <a href="/blog/nouvelles-reglementations-fiscales-2024">Lire la suite</a>
+        </article>
+        <article>
+          <h3>Comment optimiser la gestion de votre trésorerie</h3>
+          <p>Des conseils pratiques pour améliorer la gestion de votre trésorerie et assurer la stabilité financière de votre entreprise.</p>
+          <a href="/blog/optimiser-gestion-tresorerie">Lire la suite</a>
+        </article>
+      </div>
+    </section> -->
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contactez-nous</h2>
+        <div class="contact-content">
+          <form id="contact-form" class="contact-form">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <input type="text" name="subject" placeholder="Sujet" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+          </form>
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+          
+              // Paramètres pour EmailJS
+              const serviceID = 'service_60g3cto'; // Remplace par ton Service ID EmailJS
+              const templateID = 'template_g0h9qy7'; // Remplace par ton Template ID EmailJS
+          
+              // Envoie du formulaire
+              emailjs.sendForm(serviceID, templateID, this)
+                .then(function() {
+                  alert('Votre message a bien été envoyé!');
+                }, function(error) {
+                  console.log('Échec de l\'envoi...', error);
+                  alert('Erreur lors de l\'envoi du message.');
+                });
+            });
+          </script>
+          <div class="contact-info">
+            <h3>Nos coordonnées</h3>
+            <p>Akwa au niveau de Ancien PMUC, Douala, Cameroun</p>
+            <p>Téléphone : +237 659 04 82 01</p>
+            <p>Email : contact@sofisecsarl.com</p>
+            <h4>Horaires d'ouverture</h4>
+            <p>Lundi - Vendredi : 8h30 - 17h30</p>
+            <div id="map" class="google-map">
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14860.744871800016!2d9.749383197380238!3d4.051039234848668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610b749bfc7a1%3A0xd6a2907d9c4d16e3!2sDouala%2C%20Cameroun!5e0!3m2!1sfr!2s!4v1638521255805!5m2!1sfr!2s"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ressources
+              </a>
+              <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="surplusv.html">Support Comptable</a></li>
+                <li><a class="dropdown-item" href="autrev.html">Support Fiscal</a></li>
+                <li><a class="dropdown-item" href="televrai.html">Options de Téléassistance</a></li>
+                <li><a class="dropdown-item" href="informationv.html">Actualités Fiscales et Comptables</a></li>
+                <li><a class="dropdown-item" href="questionsv.html">FAQ - Questions Fréquentes</a></li>
+                <li><a class="dropdown-item" href="confidentialitevrai.html">Politique de confidentialité</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contactez-nous</h4>
+          <p>Akwa au niveau de Ancien PMUC, Douala, Cameroun</p>
+          <p>Téléphone : +237 659 04 82 01</p>
+          <p>Email : contact@sofisecsarl.com</p>
+        </div>
+        <div class="footer-social">
+          <h4>Suivez-nous</h4>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="linkedin.png" alt="LinkedIn" width="32" height="32"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="iconefacebook.png" alt="Facebook" width="32" height="32"></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img src="x.png" alt="Twitter" width="32" height="32"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Cabinet Comptable sofisecsarl. Tous droits réservés.</p>
+        <p><a href="questionsv.html">Mentions légales</a> | <a href="confidentialitevrai.html">Politique de confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="televrai.html" class="teleassistance-button" id="teleassistanceBtn">
+    <img src="teleAssistance.png" alt="Téléassistance" width="24" height="24">
+    Téléassistance
+  </a>
+
+  <a href="https://wa.me/+237659048201" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+    <img src="whatsapp.png" alt="WhatsApp" width="40" height="40">
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const langSwitch = document.getElementById('langSwitch');
+      let currentLang = 'FR';
+
+      langSwitch.addEventListener('click', () => {
+        currentLang = currentLang === 'FR' ? 'EN' : 'FR';
+        langSwitch.querySelector('span').textContent = `${currentLang}`;
+        changeLanguage(currentLang);
+      });
+
+      function changeLanguage(lang) {
+        console.log(`Changing language to ${lang}`);
+      }
+
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+      });
+
+      const form = document.querySelector('.contact-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('Form submitted');
+        // alert('Merci pour votre message. Nous vous contacterons bientôt.');
+        form.reset();
+      });
+
+      const testimonialForm = document.getElementById('testimonial-form');
+      const testimonialsContainer = document.querySelector('.testimonials-container');
+
+      testimonialForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = e.target.elements.name.value;
+        const testimonial = e.target.elements.testimonial.value;
+
+        const newTestimonial = document.createElement('div');
+        newTestimonial.classList.add('testimonial');
+        newTestimonial.innerHTML = `
+          <p class="testimonial-content">"${testimonial}"</p>
+          <p class="testimonial-author">- ${name}</p>
+        `;
+
+        testimonialsContainer.appendChild(newTestimonial);
+        testimonialForm.reset();
+      });
+
+      const teleassistanceBtn = document.getElementById('teleassistanceBtn');
+
+      // teleassistanceBtn.addEventListener('click', (e) => {
+      //   e.preventDefault();
+      //   alert('Redirection vers la page de téléassistance...');
+      //    window.location.href = '/televrai.html';
+      // });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- EMAILJS SCRIPT  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("Ok36CI5T69Ka6BLot"); // USER ID EMAIL JS
+      })();
+    </script>
+    <!-- EMAILJS SCRIPT  -->
+
+  </body>
+</html>
