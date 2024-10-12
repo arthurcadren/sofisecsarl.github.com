@@ -742,6 +742,24 @@
             <textarea name="message" placeholder="Votre message" required></textarea>
             <button type="submit">Envoyer</button>
           </form>
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+          
+              // Paramètres pour EmailJS
+              const serviceID = 'service_hb2qtdy'; // Remplace par ton Service ID EmailJS
+              const templateID = 'template_g0h9qy7'; // Remplace par ton Template ID EmailJS
+          
+              // Envoie du formulaire
+              emailjs.sendForm(serviceID, templateID, this)
+                .then(function() {
+                  alert('Votre message a bien été envoyé!');
+                }, function(error) {
+                  console.log('Échec de l\'envoi...', error);
+                  alert('Erreur lors de l\'envoi du message.');
+                });
+            });
+          </script>
           <div class="contact-info">
             <h3>Nos coordonnées</h3>
             <p>Akwa au niveau de Ancien PMUC, Douala, Cameroun</p>
@@ -859,13 +877,13 @@
         observer.observe(section);
       });
 
-      const form = document.querySelector('.contact-form');
+      /*const form = document.querySelector('.contact-form');
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         console.log('Form submitted');
         alert('Merci pour votre message. Nous vous contacterons bientôt.');
         form.reset();
-      });
+      });*/
 
       const testimonialForm = document.getElementById('testimonial-form');
       const testimonialsContainer = document.querySelector('.testimonials-container');
@@ -896,5 +914,15 @@
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- EMAILJS SCRIPT  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("Ok36CI5T69Ka6BLot"); // USER ID EMAIL JS
+      })();
+    </script>
+    <!-- EMAILJS SCRIPT  -->
+
   </body>
 </html>
